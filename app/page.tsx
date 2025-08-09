@@ -1,4 +1,5 @@
 "use client"
+import type { Metadata } from "next"
 import SiteHeader from "@/components/site-header"
 import Hero from "@/components/hero"
 import Highlights from "@/components/highlights"
@@ -12,15 +13,20 @@ import AdmissionsCta from "@/components/admissions-cta"
 import Faq from "@/components/faq"
 import ContactBlock from "@/components/contact"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Instagram, Facebook } from 'lucide-react'
+import { ArrowRight, Instagram, Facebook } from "lucide-react"
 import { LanguageProvider, useI18n } from "@/components/i18n-provider"
 import FloatingCta from "@/components/floating-cta"
 
+
+
 export default function Page() {
   return (
-    <LanguageProvider>
-      <HomeContent />
-    </LanguageProvider>
+    <>
+      
+      <LanguageProvider>
+        <HomeContent />
+      </LanguageProvider>
+  </>
   )
 }
 
@@ -53,22 +59,22 @@ function HomeContent() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
             <div className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} {t('brand')} — {t('footer.rights')}
+              © {new Date().getFullYear()} {t("brand")} — {t("footer.rights")}
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3">
-                <a 
-                  href="https://www.instagram.com/pankaj.chaursiya.98?igsh=MWY2bXU0cmM5Z3Vnbg%3D%3D&utm_source=qr" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/pankaj.chaursiya.98?igsh=MWY2bXU0cmM5Z3Vnbg%3D%3D&utm_source=qr"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-slate-600 hover:text-rose-600 transition-colors"
                   aria-label="Follow us on Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a 
-                  href="https://www.facebook.com/share/19WWXp3nSY/?mibextid=wwXIfr" 
-                  target="_blank" 
+                <a
+                  href="https://www.facebook.com/share/19WWXp3nSY/?mibextid=wwXIfr"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-slate-600 hover:text-rose-600 transition-colors"
                   aria-label="Follow us on Facebook"
@@ -77,8 +83,8 @@ function HomeContent() {
                 </a>
               </div>
               <Button variant="outline" asChild>
-                <a href="/admissions" aria-label={t('cta.apply')}>
-                  {t('cta.apply')} <ArrowRight className="w-4 h-4 ml-2" />
+                <a href="/admissions" aria-label={t("cta.apply")}>
+                  {t("cta.apply")} <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
             </div>
