@@ -19,7 +19,7 @@ export default function SiteHeader() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-white/70 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full p-2.5 border-b bg-white/70 backdrop-blur">
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white ring-1 ring-slate-200">
